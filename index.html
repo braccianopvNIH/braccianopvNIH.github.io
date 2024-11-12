@@ -7,7 +7,31 @@
     <title>SLA Calculator</title>
 </head>
 <body>
-    <h1>Welcome! This is a tool to calculate SLA's based on user input.</h1>
+    <div class="calculator">
+        <h1>Welcome! This is a tool to calculate SLA's based on user input.</h1>
+        
+        <div class="input-group">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required>
+        </div>
+
+        <div class="input-group">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" required>
+        </div>
+
+        <button onclick="calculateBusinessDays()">Calculate Business Days</button>
+
+        <div id="error" class="error">End date must be after start date.</div>
+        <div id="result"></div>
+        <div id="details" class="details"></div>
+
+        <div id="holidayList">
+            <h3>Included US Federal Holidays:</h3>
+            <ul id="holidaysObserved"></ul>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
